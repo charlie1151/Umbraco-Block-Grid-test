@@ -1,0 +1,35 @@
+<style>
+    :host {
+        display: inline-block;
+        margin: 10px 0;
+    }
+    .button-preview {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 14px 28px;
+        transition: all 0.3s ease;
+        border: none;
+        background-color: #3544b1;
+        color: white;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+    .button-preview:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    .button-info {
+        display: none;
+    }
+</style>
+
+<div class="button" ng-click="block.edit()" ng-focus="block.focus">
+    <a class="button-preview " 
+       href="{{block.data.buttonUrl}}"
+       ng-bind="block.data.buttontext || 'Button Text'"
+    ></a>
+    <span class="button-info">{{block.data.buttontext || 'Button'}}</span>
+</div>

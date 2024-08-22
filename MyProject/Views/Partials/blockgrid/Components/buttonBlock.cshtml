@@ -1,0 +1,14 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem<ButtonBlock>>
+
+@{
+    var buttonText = Model.Content.Value<string>("buttonText");
+    var buttonUrl = Model.Content.Value<string>("buttonUrl");
+}
+
+<a class="btn btn-primary" href="@buttonUrl" role="button">@buttonText</a>
+
+<div class="button-block">
+    <a href="@buttonUrl" class="button">
+        @buttonText
+    </a>
+</div>
